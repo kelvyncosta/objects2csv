@@ -1,0 +1,41 @@
+{
+  "name": "objects2csv",
+  "version": "1.0.0",
+  "description": "Creates a .csv file from an array of objects.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "npm run clean && tsc",
+    "test": "jest",
+    "prepublish": "npm run test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelvyncosta/objects2csv.git"
+  },
+  "keywords": [],
+  "author": "Kelvyn Costa <kelvyncosta@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kelvyncosta/objects2csv/issues"
+  },
+  "homepage": "https://github.com/kelvyncosta/objects2csv#readme",
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "lib"
+    ]
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.0.5",
+    "typescript": "^5.0.2"
+  }
+}
